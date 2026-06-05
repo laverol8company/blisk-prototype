@@ -1,0 +1,5 @@
+# stray nested repo from GitHub Desktop (the real repo is this folder)
+prototype-autodeteiling/
+
+# large unused source videos (the site uses car-orbit.mp4)
+*.src.mp4

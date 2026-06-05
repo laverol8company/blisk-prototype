@@ -1,0 +1,782 @@
+<!DOCTYPE html>
+<html lang="uk" class="booting">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>BLISK. Преміум детейлінг-студія</title>
+  <meta name="description" content="BLISK: корекція лаку, керамічне покриття та захисні плівки для авто преміумкласу в Києві. Дзеркальний блиск, що тримається роками." />
+  <meta name="theme-color" content="#0B1022" />
+  <link rel="canonical" href="https://blisk.example/" />
+
+  <!-- Open Graph (messenger / social cards) -->
+  <meta property="og:type" content="website" />
+  <meta property="og:locale" content="uk_UA" />
+  <meta property="og:site_name" content="BLISK detailing" />
+  <meta property="og:title" content="BLISK. Преміум детейлінг-студія" />
+  <meta property="og:description" content="Корекція лаку, кераміка та захисні плівки для авто преміумкласу. Дзеркальний блиск, що тримається роками." />
+  <meta property="og:url" content="https://blisk.example/" />
+  <meta property="og:image" content="https://blisk.example/assets/og-cover.jpg" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="BLISK. Преміум детейлінг-студія" />
+  <meta name="twitter:description" content="Корекція лаку, кераміка та захисні плівки для авто преміумкласу." />
+  <meta name="twitter:image" content="https://blisk.example/assets/og-cover.jpg" />
+
+  <!-- LocalBusiness structured data (placeholder data, swap for real before launch) -->
+  <script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    "@type": ["AutoRepair", "LocalBusiness"],
+    "name": "BLISK detailing",
+    "description": "Преміум детейлінг-студія: корекція лаку, керамічне покриття, захисні плівки PPF, хімчистка салону.",
+    "image": "https://blisk.example/assets/og-cover.jpg",
+    "url": "https://blisk.example/",
+    "telephone": "+380441234567",
+    "priceRange": "$$$",
+    "address": {
+      "@type": "PostalAddress",
+      "streetAddress": "вул. Боксова, 12",
+      "addressLocality": "Київ",
+      "addressCountry": "UA"
+    },
+    "geo": { "@type": "GeoCoordinates", "latitude": 50.4501, "longitude": 30.5234 },
+    "openingHoursSpecification": {
+      "@type": "OpeningHoursSpecification",
+      "dayOfWeek": ["Monday","Tuesday","Wednesday","Thursday","Friday","Saturday","Sunday"],
+      "opens": "09:00", "closes": "20:00"
+    },
+    "areaServed": "Київ",
+    "sameAs": ["https://instagram.com/", "https://t.me/"]
+  }
+  </script>
+
+  <!-- Fonts: Unbounded (display, Cyrillic) + Manrope (body, Cyrillic) + JetBrains Mono (specs) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@400;600;700;800&family=Manrope:wght@400;500;600;700&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet" />
+
+  <!-- Phosphor icons (icon font, no hand-rolled SVG) -->
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/regular/style.css" />
+  <link rel="stylesheet" href="https://unpkg.com/@phosphor-icons/web@2.1.1/src/fill/style.css" />
+
+  <link rel="stylesheet" href="styles.css" />
+</head>
+<body>
+  <!-- boot sequence: branded shimmer, then lights-on reveal -->
+  <div class="boot" id="boot">
+    <span class="boot-word">BLISK</span>
+    <span class="boot-bar"><i></i></span>
+  </div>
+
+  <!-- cursor accent glow -->
+  <div class="cursor-glow" id="cursorGlow" aria-hidden="true"></div>
+
+  <!-- ============ NAV ============ -->
+  <header class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="#hero" class="brand" aria-label="BLISK, на головну">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="brand-svg" viewBox="0 0 24 28" fill="none">
+            <defs><linearGradient id="bkChrome" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#F7F2E6"/><stop offset=".46" stop-color="#CFC2A0"/><stop offset="1" stop-color="#7E6F4F"/></linearGradient></defs>
+            <path d="M12 1.6C12 1.6 4.5 11 4.5 16.6a7.5 7.5 0 1 0 15 0C19.5 11 12 1.6 12 1.6Z" fill="url(#bkChrome)"/>
+            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#66E0D6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <ellipse cx="15.4" cy="12" rx="1.7" ry="3.1" fill="#fff" opacity=".82" transform="rotate(24 15.4 12)"/>
+          </svg>
+        </span>
+        <span class="brand-name">BLISK</span>
+      </a>
+
+      <nav class="nav-menu" id="navMenu" aria-label="Головна навігація">
+        <a href="#services">Послуги</a>
+        <a href="#result">До / Після</a>
+        <a href="#calc">Ціни</a>
+        <a href="#works">Роботи</a>
+        <a href="#team">Майстри</a>
+        <a href="#about">Про нас</a>
+        <a href="#contact">Контакти</a>
+        <a href="#contact" class="btn btn-primary nav-cta" data-book>Записатися</a>
+      </nav>
+
+      <button class="nav-toggle" id="navToggle" aria-label="Меню" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </header>
+
+  <main>
+    <!-- ============ HERO: auto-orbit video, native scroll ============ -->
+    <section class="vhero" id="hero">
+      <video class="vhero-bg" id="heroVideo" autoplay muted loop playsinline disablepictureinpicture
+             poster="assets/poster.jpg" aria-label="Авто обертається в детейлінг-боксі">
+        <source src="assets/car-orbit.mp4" type="video/mp4" />
+      </video>
+      <div class="vhero-scrim" aria-hidden="true"></div>
+      <div class="vhero-inner">
+        <p class="eyebrow">Преміум детейлінг-студія</p>
+        <h1 class="vhero-title">Досконалість<br /><span class="chrome">під будь-яким кутом</span></h1>
+        <p class="vhero-sub">Корекція лаку, кераміка та захисні плівки для авто преміумкласу. Ручна робота в боксі зі студійним світлом.</p>
+        <div class="vhero-cta">
+          <a href="#contact" class="btn btn-primary btn-lg magnetic" data-book>Записатися <i class="ph ph-arrow-right"></i></a>
+          <a href="#calc" class="btn btn-ghost btn-lg">Розрахувати вартість</a>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ SERVICES ============ -->
+    <section class="services" id="services">
+      <header class="section-head">
+        <p class="eyebrow">Послуги</p>
+        <h2 class="section-title">Повний догляд за авто <span class="chrome">під ключ</span></h2>
+      </header>
+      <div class="svc-grid">
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-ceramic.jpg" alt="Керамічне покриття, краплі води на лаку" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Керамічне покриття</h3>
+            <p>Рідке скло 9H. Гідрофобний шар, захист від ультрафіолету та реагентів, дзеркальна глибина кольору.</p>
+            <span class="svc-tag">Гарантія до 5 років</span>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-correction.jpg" alt="Корекція лаку, полірування кузова" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Корекція лаку</h3>
+            <p>Багатоетапне полірування. Прибираємо риски, голограми та затертості, повертаємо рівне дзеркало.</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-ppf.jpg" alt="Захисна плівка PPF на кузові" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Захисна плівка PPF</h3>
+            <p>Антигравійна поліуретанова плівка з ефектом самовідновлення мікроподряпин на кузові.</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-interior.jpg" alt="Хімчистка салону, шкіряний інтерʼєр" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Хімчистка салону</h3>
+            <p>Глибоке очищення шкіри, тканини й пластику. Озонування проти запахів.</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-wash.jpg" alt="Безконтактна мийка авто" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Безконтактна мийка</h3>
+            <p>Двофазна мийка та деконтамінація як основа будь-якої якісної роботи.</p>
+          </div>
+        </article>
+        <article class="svc reveal">
+          <div class="svc-img"><img src="assets/svc-headlight.jpg" alt="Полірування фар авто" loading="lazy" /></div>
+          <div class="svc-body">
+            <h3>Полірування фар</h3>
+            <p>Повертаємо прозорість і чисте світло замість каламутного пластику.</p>
+          </div>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ BRAND MARQUEE ============ -->
+    <section class="brands" aria-label="Бренди авто, з якими працюємо">
+      <p class="brands-label">Доглядаємо за авто провідних марок</p>
+      <div class="marquee" id="brandMarquee">
+        <div class="marquee-track">
+          <!-- duplicated in JS for seamless loop -->
+          <img src="https://cdn.simpleicons.org/porsche/8A95A2" alt="Porsche" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'PORSCHE'}))" />
+          <img src="https://cdn.simpleicons.org/bmw/8A95A2" alt="BMW" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'BMW'}))" />
+          <img src="https://cdn.simpleicons.org/mercedes/8A95A2" alt="Mercedes-Benz" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'MERCEDES'}))" />
+          <img src="https://cdn.simpleicons.org/audi/8A95A2" alt="Audi" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'AUDI'}))" />
+          <img src="https://cdn.simpleicons.org/tesla/8A95A2" alt="Tesla" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'TESLA'}))" />
+          <img src="https://cdn.simpleicons.org/landrover/8A95A2" alt="Land Rover" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'LAND ROVER'}))" />
+          <img src="https://cdn.simpleicons.org/lexus/8A95A2" alt="Lexus" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'LEXUS'}))" />
+          <img src="https://cdn.simpleicons.org/jaguar/8A95A2" alt="Jaguar" onerror="this.replaceWith(Object.assign(document.createElement('span'),{className:'wordmark',textContent:'JAGUAR'}))" />
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ STATS BAND ============ -->
+    <section class="stats" aria-label="Студія в цифрах">
+      <div class="stats-grid">
+        <div class="stat reveal">
+          <div class="stat-num"><span data-count="8">0</span></div>
+          <div class="stat-label">років у детейлінгу</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num"><span data-count="1200">0</span><span class="stat-suffix">+</span></div>
+          <div class="stat-label">авто пройшло бокс</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num"><span class="stat-prefix">до</span> <span data-count="5">0</span></div>
+          <div class="stat-label">років гарантії на кераміку</div>
+        </div>
+        <div class="stat reveal">
+          <div class="stat-num"><span data-count="9">0</span><span class="stat-suffix">H</span></div>
+          <div class="stat-label">твердість покриття</div>
+        </div>
+      </div>
+    </section>
+
+
+
+    <!-- ============ WHY US / ABOUT ============ -->
+    <!-- trust claims below are placeholders, verify before launch -->
+    <section class="why" id="about">
+      <header class="section-head why-head">
+        <p class="eyebrow">Чому BLISK</p>
+        <h2 class="section-title">Студія, якій довіряють <span class="chrome" data-chrome>дороге авто</span></h2>
+        <p class="section-sub">Для нас кожне авто це інвестиція власника. Працюємо вручну, у власному боксі зі студійним світлом, і нічого не віддаємо на сторону. На кожну роботу даємо гарантійний талон.</p>
+        <div class="why-badges">
+          <span class="why-badge"><i class="ph-fill ph-trophy"></i> №1 за відгуками у районі</span>
+          <span class="why-badge"><i class="ph ph-seal-check"></i> Сертифікований інсталятор</span>
+          <span class="why-badge"><i class="ph ph-shield-check"></i> Гарантія до 5 років</span>
+        </div>
+      </header>
+      <div class="why-grid">
+        <article class="why-card reveal">
+          <span class="why-ic"><i class="ph ph-hand-fist"></i></span>
+          <span class="why-line" aria-hidden="true"></span>
+          <h3>Ручна робота</h3>
+          <p>Без конвеєра. Майстер веде ваше авто від прийому до видачі особисто.</p>
+        </article>
+        <article class="why-card reveal">
+          <span class="why-ic"><i class="ph ph-garage"></i></span>
+          <span class="why-line" aria-hidden="true"></span>
+          <h3>Все у своєму боксі</h3>
+          <p>Нічого не передаємо підрядникам. Повний контроль якості на кожному етапі.</p>
+        </article>
+        <article class="why-card reveal">
+          <span class="why-ic"><i class="ph ph-flask"></i></span>
+          <span class="why-line" aria-hidden="true"></span>
+          <h3>Преміум-хімія</h3>
+          <p>Сертифіковані матеріали та обладнання, з якими покриття служить роками.</p>
+        </article>
+        <article class="why-card reveal">
+          <span class="why-ic"><i class="ph ph-seal-check"></i></span>
+          <span class="why-line" aria-hidden="true"></span>
+          <h3>Гарантійний талон</h3>
+          <p>Офіційна гарантія на покриття і чіткі рекомендації з догляду.</p>
+        </article>
+      </div>
+    </section>
+
+    <!-- ============ BEFORE / AFTER (inspection lamp) ============ -->
+    <section class="result" id="result">
+      <header class="section-head">
+        <h2 class="section-title">До і <span class="chrome" data-chrome>після</span></h2>
+        <p class="section-sub">Той самий кузов: матовий, з рисками та голограмами, і дзеркальний після корекції з керамікою. Рухайте смугу, щоб порівняти.</p>
+      </header>
+
+      <div class="cmp" id="cmp" style="--pos:50%" role="group" aria-label="Порівняння кузова до і після обробки">
+        <div class="cmp-pane cmp-before">
+          <img src="assets/result.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-car-paint-macro/1600/900'" alt="Кузов до обробки: матовий лак, риски та голограми" />
+          <div class="cmp-swirls" aria-hidden="true"></div>
+        </div>
+        <div class="cmp-pane cmp-after" id="cmpAfter">
+          <img src="assets/result.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-car-paint-macro/1600/900'" alt="Кузов після корекції: дзеркальний блиск" />
+          <div class="cmp-gloss" aria-hidden="true"></div>
+        </div>
+        <span class="cmp-tag cmp-tag--after">Після</span>
+        <span class="cmp-tag cmp-tag--before">До</span>
+        <div class="cmp-seam" id="cmpSeam">
+          <button class="cmp-handle" id="cmpHandle" type="button" role="slider" tabindex="0" aria-label="Порівняти до і після" aria-valuemin="0" aria-valuemax="100" aria-valuenow="50">
+            <i class="ph-bold ph-caret-left"></i><i class="ph-bold ph-caret-right"></i>
+          </button>
+        </div>
+        <p class="cmp-hint" id="cmpHint"><i class="ph ph-arrows-left-right"></i> Рухайте, щоб порівняти</p>
+      </div>
+    </section>
+
+    <!-- ============ CONFIGURATOR ============ -->
+    <section class="calc" id="calc">
+      <div class="calc-wrap">
+        <header class="section-head calc-head">
+          <h2 class="section-title">Пакети та <span class="chrome" data-chrome>ціни</span></h2>
+          <p class="section-sub">Прозорі тарифи. Оберіть готовий пакет нижче або зберіть свій. Точну вартість назвемо після огляду авто.</p>
+        </header>
+
+        <div class="tiers">
+          <article class="tier" data-pack="Express блиск" role="button" tabindex="0">
+            <div class="tier-top">
+              <h3 class="tier-name">Express блиск</h3>
+              <p class="tier-desc">Швидке відновлення між сезонами</p>
+            </div>
+            <p class="tier-price"><span class="tier-from">від</span> 900 <span class="tier-cur">грн</span></p>
+            <p class="tier-time"><i class="ph ph-clock"></i> 1 день</p>
+            <ul class="tier-feats">
+              <li><i class="ph ph-check"></i> Двофазна мийка</li>
+              <li><i class="ph ph-check"></i> Деконтамінація кузова</li>
+              <li><i class="ph ph-check"></i> Експрес-захист покриття</li>
+            </ul>
+            <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
+          </article>
+
+          <article class="tier" data-pack="Глибока корекція" role="button" tabindex="0">
+            <div class="tier-top">
+              <h3 class="tier-name">Глибока корекція</h3>
+              <p class="tier-desc">Прибрати риски та повернути глибину</p>
+            </div>
+            <p class="tier-price"><span class="tier-from">від</span> 4 500 <span class="tier-cur">грн</span></p>
+            <p class="tier-time"><i class="ph ph-clock"></i> 2 дні</p>
+            <ul class="tier-feats">
+              <li><i class="ph ph-check"></i> Полірування лаку</li>
+              <li><i class="ph ph-check"></i> Видалення рисок і голограм</li>
+              <li><i class="ph ph-check"></i> Базовий захист</li>
+            </ul>
+            <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
+          </article>
+
+          <article class="tier is-popular" data-pack="Кераміка PRO" role="button" tabindex="0">
+            <span class="tier-badge">Популярний</span>
+            <div class="tier-top">
+              <h3 class="tier-name">Кераміка PRO</h3>
+              <p class="tier-desc">Дзеркальний лак і захист на роки</p>
+            </div>
+            <p class="tier-price"><span class="tier-from">від</span> 11 000 <span class="tier-cur">грн</span></p>
+            <p class="tier-time"><i class="ph ph-clock"></i> 4 дні</p>
+            <ul class="tier-feats">
+              <li><i class="ph ph-check"></i> Корекція лаку</li>
+              <li><i class="ph ph-check"></i> Кераміка 9H</li>
+              <li><i class="ph ph-check"></i> Гідрофоб до 5 років</li>
+            </ul>
+            <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
+          </article>
+
+          <article class="tier" data-pack="PPF Бронепакет" role="button" tabindex="0">
+            <div class="tier-top">
+              <h3 class="tier-name">PPF Бронепакет</h3>
+              <p class="tier-desc">Максимальний захист кузова від сколів</p>
+            </div>
+            <p class="tier-price"><span class="tier-from">від</span> 38 000 <span class="tier-cur">грн</span></p>
+            <p class="tier-time"><i class="ph ph-clock"></i> 6 днів</p>
+            <ul class="tier-feats">
+              <li><i class="ph ph-check"></i> Антигравійна плівка</li>
+              <li><i class="ph ph-check"></i> Ефект самозагоєння</li>
+              <li><i class="ph ph-check"></i> Збереження кольору</li>
+            </ul>
+            <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
+          </article>
+        </div>
+
+        <p class="calc-or"><span>Або зберіть свій пакет під себе</span></p>
+
+        <div class="calc-grid">
+          <div class="calc-controls">
+            <!-- class -->
+            <fieldset class="calc-block">
+              <legend>Клас авто</legend>
+              <div class="opt-row" data-group="klass">
+                <button class="opt is-active" data-mult="1" data-val="Седан"><i class="ph ph-car"></i><span>Седан</span></button>
+                <button class="opt" data-mult="1.25" data-val="Кросовер / SUV"><i class="ph ph-jeep"></i><span>SUV</span></button>
+                <button class="opt" data-mult="1.15" data-val="Спорткар"><i class="ph ph-car-profile"></i><span>Спорткар</span></button>
+                <button class="opt" data-mult="1.45" data-val="Преміум-клас"><i class="ph ph-crown-simple"></i><span>Преміум</span></button>
+              </div>
+            </fieldset>
+
+            <!-- package -->
+            <fieldset class="calc-block">
+              <legend>Пакет робіт</legend>
+              <div class="opt-row opt-row--stack" data-group="pack">
+                <button class="opt opt-wide is-active" data-min="900" data-max="1600" data-days="1" data-val="Express блиск">
+                  <span class="opt-wide-main"><i class="ph ph-spray-bottle"></i> Express блиск</span>
+                  <span class="opt-wide-meta">мийка та експрес-догляд</span>
+                </button>
+                <button class="opt opt-wide" data-min="4500" data-max="9000" data-days="2" data-val="Глибока корекція">
+                  <span class="opt-wide-main"><i class="ph ph-sparkle"></i> Глибока корекція</span>
+                  <span class="opt-wide-meta">полірування плюс базовий захист</span>
+                </button>
+                <button class="opt opt-wide" data-min="11000" data-max="24000" data-days="4" data-val="Кераміка PRO">
+                  <span class="opt-wide-main"><i class="ph ph-drop"></i> Кераміка PRO</span>
+                  <span class="opt-wide-meta">корекція плюс кераміка 9H</span>
+                </button>
+                <button class="opt opt-wide" data-min="38000" data-max="78000" data-days="6" data-val="PPF Бронепакет">
+                  <span class="opt-wide-main"><i class="ph ph-shield-check"></i> PPF Бронепакет</span>
+                  <span class="opt-wide-meta">антигравійна плівка на кузов</span>
+                </button>
+              </div>
+            </fieldset>
+
+            <!-- add-ons -->
+            <fieldset class="calc-block">
+              <legend>Додатково</legend>
+              <div class="addons" data-group="addon">
+                <button class="chip" data-add="2500" data-days="1" data-val="Хімчистка салону">Хімчистка салону</button>
+                <button class="chip" data-add="1800" data-days="0" data-val="Захист шкіри">Захист шкіри</button>
+                <button class="chip" data-add="1200" data-days="0" data-val="Полірування фар">Полірування фар</button>
+                <button class="chip" data-add="900" data-days="0" data-val="Озонування">Озонування</button>
+              </div>
+            </fieldset>
+          </div>
+
+          <!-- summary -->
+          <aside class="calc-summary" aria-live="polite">
+            <p class="summary-eyebrow">Орієнтовна вартість</p>
+            <div class="summary-price">
+              <span id="calcMin">900</span><span class="summary-dash"> </span><span id="calcMax">1600</span>
+              <span class="summary-cur">грн</span>
+            </div>
+            <div class="summary-meta">
+              <span><i class="ph ph-clock"></i> <span id="calcTime">1</span> дн.</span>
+              <span><i class="ph ph-shield-check"></i> гарантія</span>
+            </div>
+            <ul class="summary-list" id="summaryList"></ul>
+            <a href="#contact" class="btn btn-primary btn-block magnetic" id="calcBook" data-book>Записатися на цей пакет</a>
+            <p class="summary-note">Це попередній розрахунок. Фінальна ціна залежить від стану лаку.</p>
+          </aside>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ GALLERY (DRAG) ============ -->
+    <section class="works" id="works">
+      <header class="section-head works-head">
+        <h2 class="section-title">Наш гараж</h2>
+        <p class="section-sub drag-hint"><i class="ph ph-hand-grabbing"></i> Перетягніть, щоб гортати</p>
+      </header>
+
+      <div class="gallery" id="gallery">
+        <div class="gallery-track" id="galleryTrack">
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-black-suv/700/520?grayscale'" alt="Range Rover, кераміка" loading="lazy" /></div>
+            <figcaption><strong>Range Rover Sport</strong><span>Кераміка 9H плюс корекція</span></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-2.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-sportcar/700/520?grayscale'" alt="Porsche, PPF" loading="lazy" /></div>
+            <figcaption><strong>Porsche 911</strong><span>PPF на весь кузов</span></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-3.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-sedan-blue/700/520?grayscale'" alt="BMW, корекція" loading="lazy" /></div>
+            <figcaption><strong>BMW M5</strong><span>Глибока корекція лаку</span></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-4.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-interior-lux/700/520?grayscale'" alt="Салон, хімчистка" loading="lazy" /></div>
+            <figcaption><strong>Mercedes S-class</strong><span>Хімчистка та захист шкіри</span></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-5.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-white-coupe/700/520?grayscale'" alt="Audi, кераміка" loading="lazy" /></div>
+            <figcaption><strong>Audi RS7</strong><span>Кераміка плюс полірування фар</span></figcaption>
+          </figure>
+          <figure class="work">
+            <div class="work-img"><img src="assets/work-6.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-tesla-dark/700/520?grayscale'" alt="Tesla, захист" loading="lazy" /></div>
+            <figcaption><strong>Tesla Model S</strong><span>PPF на фронтальну зону</span></figcaption>
+          </figure>
+        </div>
+      </div>
+    </section>
+
+    <!-- ============ TEAM / MASTERS ============ -->
+    <section class="masters" id="team">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">Команда</p>
+        <h2 class="section-title">Майстри, яким довіряють авто</h2>
+        <p class="section-sub">Кожну машину веде профільний спеціаліст. Не конвеєр, а руки, які роблять це щодня.</p>
+      </header>
+
+      <div class="masters-grid">
+        <article class="master reveal" style="--rd:0">
+          <img class="master-img" src="assets/team-1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master1/640/800?grayscale'" alt="Олег, майстер керамічних покриттів за роботою" loading="lazy" />
+          <span class="master-tag"><i class="ph ph-shield-check"></i> Кераміка та захист</span>
+          <div class="master-cap">
+            <h3 class="master-name">Олег Дорошенко</h3>
+            <p class="master-role">Майстер керамічних покриттів</p>
+            <p class="master-stat"><span>12 років</span><span>900+ авто</span></p>
+          </div>
+        </article>
+
+        <article class="master reveal" style="--rd:1">
+          <img class="master-img" src="assets/team-2.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master2/640/800?grayscale'" alt="Андрій, спеціаліст з корекції лаку за роботою" loading="lazy" />
+          <span class="master-tag"><i class="ph ph-sparkle"></i> Полірування ЛФП</span>
+          <div class="master-cap">
+            <h3 class="master-name">Андрій Левченко</h3>
+            <p class="master-role">Спеціаліст з корекції лаку</p>
+            <p class="master-stat"><span>9 років</span><span>1200+ авто</span></p>
+          </div>
+        </article>
+
+        <article class="master reveal" style="--rd:2">
+          <img class="master-img" src="assets/team-3.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master3/640/800?grayscale'" alt="Ігор, майстер оклейки плівкою за роботою" loading="lazy" />
+          <span class="master-tag"><i class="ph ph-shield-star"></i> PPF броня</span>
+          <div class="master-cap">
+            <h3 class="master-name">Ігор Савчук</h3>
+            <p class="master-role">Майстер оклейки плівкою</p>
+            <p class="master-stat"><span>8 років</span><span>500+ авто</span></p>
+          </div>
+        </article>
+
+        <article class="master reveal" style="--rd:3">
+          <img class="master-img" src="assets/team-4.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master4/640/800?grayscale'" alt="Марина, майстер детейлінгу салону за роботою" loading="lazy" />
+          <span class="master-tag"><i class="ph ph-armchair"></i> Хімчистка та шкіра</span>
+          <div class="master-cap">
+            <h3 class="master-name">Марина Коваль</h3>
+            <p class="master-role">Майстер детейлінгу салону</p>
+            <p class="master-stat"><span>7 років</span><span>800+ авто</span></p>
+          </div>
+        </article>
+      </div>
+
+      <p class="masters-note"><i class="ph ph-seal-check"></i> Сертифіковані аплікатори. Гарантія на кожну роботу зафіксована в договорі.</p>
+    </section>
+
+    <!-- ============ TESTIMONIALS ============ -->
+    <section class="reviews" aria-label="Відгуки клієнтів">
+      <header class="section-head reviews-head">
+        <h2 class="section-title">Що кажуть власники</h2>
+        <div class="rating-badge" aria-label="Рейтинг 4.9 з 5">
+          <span class="rating-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></span>
+          <span class="rating-num">4.9</span>
+          <span class="rating-meta">понад 200 відгуків</span>
+        </div>
+      </header>
+      <div class="reviews-grid">
+        <figure class="review reveal">
+          <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote>Забирав авто і не впізнав колір. Глибина лаку як у салоні, вода скочується сама. Сервіс на рівні.</blockquote>
+          <figcaption><span class="review-name">Андрій Коваль</span><span class="review-car">BMW M4 Competition</span><span class="review-svc">Кераміка 9H плюс корекція лаку</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote>Зробили PPF на новий Porsche. Плівки не видно взагалі, а дрібні подряпини зникають самі. Рекомендую.</blockquote>
+          <figcaption><span class="review-name">Дмитро Левченко</span><span class="review-car">Porsche Cayenne</span><span class="review-svc">PPF на весь кузов</span></figcaption>
+        </figure>
+        <figure class="review reveal">
+          <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
+          <blockquote>Хлопці врятували салон після собаки і моря. Шкіра як новенька, запаху немає. Дуже акуратна робота.</blockquote>
+          <figcaption><span class="review-name">Ірина Бондар</span><span class="review-car">Audi Q7</span><span class="review-svc">Хімчистка та захист шкіри</span></figcaption>
+        </figure>
+      </div>
+    </section>
+
+    <!-- ============ FAQ ============ -->
+    <section class="faq" id="faq">
+      <header class="section-head">
+        <h2 class="section-title">Часті запитання</h2>
+      </header>
+      <div class="faq-list">
+        <details class="faq-item reveal">
+          <summary>Скільки тримається керамічне покриття? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Залежно від пакета та догляду, від 2 до 5 років. На преміум-кераміку 9H даємо гарантію до 5 років.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Чим кераміка краща за віск? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Віск тримається 1-2 місяці. Кераміка 9H твердіша, дає стійкий гідрофоб, захист від ультрафіолету й реагентів і служить роками.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Скільки часу займає обробка? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Від кількох годин за експрес-догляд до 4-6 днів за повну корекцію з керамікою або PPF. Точний час назвемо після огляду.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Чи можна мити авто після кераміки? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Так. Перші 7 днів краще без агресивної хімії та щіткових мийок, далі звичайний догляд. Ми дамо памʼятку.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Що таке PPF і навіщо вона? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Антигравійна поліуретанова плівка. Захищає лак від сколів, подряпин і реагентів, а дрібні подряпини на ній затягуються самі.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Ви даєте гарантію? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Так, на кожну роботу видаємо гарантійний талон і рекомендації з догляду.</p></div>
+        </details>
+        <details class="faq-item reveal">
+          <summary>Як записатися? <i class="ph ph-plus" aria-hidden="true"></i></summary>
+          <div class="faq-a"><p>Натисніть «Записатися» для повного онлайн-запису, або залиште контакти нижче, і ми передзвонимо протягом 15 хвилин.</p></div>
+        </details>
+      </div>
+    </section>
+
+    <!-- ============ FINAL CTA + CONTACT ============ -->
+    <section class="contact" id="contact">
+      <div class="contact-grid">
+        <div class="contact-copy">
+          <h2 class="section-title">Зручніше, щоб ми <span class="chrome" data-chrome>передзвонили</span>?</h2>
+          <p class="section-sub">Залиште контакти, передзвонимо протягом 15 хвилин, узгодимо зручний час і назвемо точну вартість. А повний онлайн-запис у кнопці «Записатися».</p>
+
+          <ul class="contact-list">
+            <li><i class="ph ph-phone-call"></i> <a href="tel:+380441234567">+380 (44) 123 45 67</a></li>
+            <li><i class="ph ph-map-pin"></i> Київ, вул. Боксова, 12 <span class="muted">(адреса-плейсхолдер)</span></li>
+            <li><i class="ph ph-clock"></i> Щодня з 09:00 до 20:00</li>
+          </ul>
+
+          <div class="socials">
+            <a href="#" aria-label="Instagram" class="social"><i class="ph ph-instagram-logo"></i></a>
+            <a href="#" aria-label="Telegram" class="social"><i class="ph ph-telegram-logo"></i></a>
+            <a href="#" aria-label="Viber" class="social"><i class="ph ph-chat-circle"></i></a>
+          </div>
+        </div>
+
+        <form class="contact-form" id="bookForm" novalidate>
+          <div class="field">
+            <label for="fName">Ваше імʼя</label>
+            <input type="text" id="fName" name="name" placeholder="Як до вас звертатися" autocomplete="name" required />
+          </div>
+          <div class="field">
+            <label for="fPhone">Телефон</label>
+            <input type="tel" id="fPhone" name="phone" placeholder="+380 __ ___ __ __" autocomplete="tel" required />
+          </div>
+          <div class="field">
+            <label for="fCar">Авто</label>
+            <input type="text" id="fCar" name="car" placeholder="Марка та модель" />
+          </div>
+          <div class="field">
+            <label for="fPack">Пакет</label>
+            <select id="fPack" name="package">
+              <option>Express блиск</option>
+              <option>Глибока корекція</option>
+              <option>Кераміка PRO</option>
+              <option>PPF Бронепакет</option>
+              <option>Поки не визначився</option>
+            </select>
+          </div>
+          <button type="submit" class="btn btn-primary btn-block btn-lg magnetic">Передзвоніть мені</button>
+          <p class="form-status" id="formStatus" role="status"></p>
+        </form>
+      </div>
+
+      <div class="contact-map reveal">
+        <iframe title="Карта: BLISK detailing, Київ" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                src="https://www.google.com/maps?q=%D0%9A%D0%B8%D1%97%D0%B2&z=11&output=embed"></iframe>
+      </div>
+    </section>
+  </main>
+
+  <!-- ============ FOOTER ============ -->
+  <footer class="footer">
+    <div class="footer-inner">
+      <a href="#hero" class="brand brand--footer">
+        <span class="brand-mark" aria-hidden="true">
+          <svg class="brand-svg" viewBox="0 0 24 28" fill="none">
+            <defs><linearGradient id="bkChromeF" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#F7F2E6"/><stop offset=".46" stop-color="#CFC2A0"/><stop offset="1" stop-color="#7E6F4F"/></linearGradient></defs>
+            <path d="M12 1.6C12 1.6 4.5 11 4.5 16.6a7.5 7.5 0 1 0 15 0C19.5 11 12 1.6 12 1.6Z" fill="url(#bkChromeF)"/>
+            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#66E0D6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <ellipse cx="15.4" cy="12" rx="1.7" ry="3.1" fill="#fff" opacity=".82" transform="rotate(24 15.4 12)"/>
+          </svg>
+        </span>
+        <span class="brand-name">BLISK</span>
+      </a>
+      <nav class="footer-nav" aria-label="Підвал">
+        <a href="#services">Послуги</a>
+        <a href="#calc">Ціни</a>
+        <a href="#works">Роботи</a>
+        <a href="#contact">Контакти</a>
+      </nav>
+      <p class="footer-copy">© 2026 BLISK detailing. Усі права захищені.</p>
+    </div>
+  </footer>
+
+  <!-- ============ CONCIERGE CHAT (frontend) ============ -->
+  <div class="cbot" id="cbot">
+    <button class="cbot-launch" id="cbotLaunch" aria-label="Чат з консьєржем" aria-expanded="false">
+      <i class="ph-fill ph-chat-teardrop-dots cbot-ic-open"></i>
+      <i class="ph ph-x cbot-ic-close"></i>
+      <span class="cbot-badge" aria-hidden="true"></span>
+    </button>
+    <div class="cbot-panel" id="cbotPanel" role="dialog" aria-label="Чат з консьєржем BLISK" hidden>
+      <header class="cbot-head">
+        <span class="cbot-ava"><i class="ph-fill ph-drop-half"></i></span>
+        <div class="cbot-who">
+          <strong>BLISK консьєрж</strong>
+          <em><span class="cbot-dot"></span> зазвичай відповідає за хвилину</em>
+        </div>
+        <button class="cbot-close" id="cbotClose" type="button" aria-label="Закрити чат"><i class="ph ph-x"></i></button>
+      </header>
+      <div class="cbot-log" id="cbotLog" aria-live="polite"></div>
+      <div class="cbot-quick" id="cbotQuick"></div>
+      <form class="cbot-input" id="cbotForm">
+        <input id="cbotText" placeholder="Напишіть запитання" autocomplete="off" aria-label="Ваше повідомлення" />
+        <button type="submit" aria-label="Надіслати"><i class="ph ph-paper-plane-right"></i></button>
+      </form>
+    </div>
+  </div>
+
+  <!-- ============ ONLINE BOOKING (multi-step) ============ -->
+  <div class="booking" id="booking" role="dialog" aria-modal="true" aria-label="Онлайн-запис на детейлінг" hidden>
+    <div class="booking-backdrop" data-bclose></div>
+    <div class="booking-panel" role="document">
+      <button class="booking-close" data-bclose aria-label="Закрити"><i class="ph ph-x"></i></button>
+      <p class="booking-kicker">Онлайн-запис</p>
+
+      <ol class="booking-steps" id="bookingSteps">
+        <li class="is-on" data-dot="1"><span>1</span>Пакет</li>
+        <li data-dot="2"><span>2</span>Авто</li>
+        <li data-dot="3"><span>3</span>Дата</li>
+        <li data-dot="4"><span>4</span>Контакти</li>
+        <li data-dot="5"><span>5</span>Готово</li>
+      </ol>
+
+      <div class="booking-body">
+        <!-- 1: package -->
+        <section class="bstep is-on" data-step="1">
+          <h3 class="bstep-title">Оберіть пакет</h3>
+          <div class="bpacks" data-bgroup="pack">
+            <button class="bpack is-active" data-val="Express блиск" data-price="900 - 1 600 грн"><i class="ph ph-spray-bottle"></i><span>Express блиск</span><em>мийка та експрес-догляд</em></button>
+            <button class="bpack" data-val="Глибока корекція" data-price="4 500 - 9 000 грн"><i class="ph ph-sparkle"></i><span>Глибока корекція</span><em>полірування плюс захист</em></button>
+            <button class="bpack" data-val="Кераміка PRO" data-price="11 000 - 24 000 грн"><i class="ph ph-drop"></i><span>Кераміка PRO</span><em>корекція плюс кераміка 9H</em></button>
+            <button class="bpack" data-val="PPF Бронепакет" data-price="38 000 - 78 000 грн"><i class="ph ph-shield-check"></i><span>PPF Бронепакет</span><em>антигравійна плівка</em></button>
+          </div>
+        </section>
+
+        <!-- 2: car -->
+        <section class="bstep" data-step="2">
+          <h3 class="bstep-title">Ваше авто</h3>
+          <div class="bclass" data-bgroup="class">
+            <button class="bopt is-active" data-val="Седан"><i class="ph ph-car"></i>Седан</button>
+            <button class="bopt" data-val="Кросовер / SUV"><i class="ph ph-jeep"></i>SUV</button>
+            <button class="bopt" data-val="Спорткар"><i class="ph ph-car-profile"></i>Спорткар</button>
+            <button class="bopt" data-val="Преміум-клас"><i class="ph ph-crown-simple"></i>Преміум</button>
+          </div>
+          <div class="field">
+            <label for="bCar">Марка та модель</label>
+            <input type="text" id="bCar" placeholder="Напр. BMW M5" autocomplete="off" />
+          </div>
+        </section>
+
+        <!-- 3: date + time -->
+        <section class="bstep" data-step="3">
+          <h3 class="bstep-title">Зручні дата і час</h3>
+          <div class="bcal">
+            <div class="bcal-head">
+              <button type="button" id="bcalPrev" aria-label="Попередній місяць"><i class="ph ph-caret-left"></i></button>
+              <span id="bcalMonth"></span>
+              <button type="button" id="bcalNext" aria-label="Наступний місяць"><i class="ph ph-caret-right"></i></button>
+            </div>
+            <div class="bcal-week"><span>Пн</span><span>Вт</span><span>Ср</span><span>Чт</span><span>Пт</span><span>Сб</span><span>Нд</span></div>
+            <div class="bcal-grid" id="bcalGrid"></div>
+          </div>
+          <p class="bslots-label">Вільні слоти</p>
+          <div class="bslots" id="bSlots"></div>
+        </section>
+
+        <!-- 4: contacts -->
+        <section class="bstep" data-step="4">
+          <h3 class="bstep-title">Куди передзвонити</h3>
+          <div class="field">
+            <label for="bName">Ваше імʼя</label>
+            <input type="text" id="bName" placeholder="Як до вас звертатися" autocomplete="name" />
+          </div>
+          <div class="field">
+            <label for="bPhone">Телефон</label>
+            <input type="tel" id="bPhone" placeholder="+380 __ ___ __ __" autocomplete="tel" />
+          </div>
+          <p class="bstep-note">Передзвонимо протягом 15 хвилин, підтвердимо час і відповімо на питання.</p>
+        </section>
+
+        <!-- 5: confirmation -->
+        <section class="bstep bstep--done" data-step="5">
+          <div class="bdone-check"><i class="ph ph-check"></i></div>
+          <h3 class="bstep-title">Заявку прийнято</h3>
+          <div class="bticket" id="bTicket"></div>
+          <p class="bstep-note">Ми вже отримали запис. Це демо-прототип, тому нічого нікуди не відправляється.</p>
+        </section>
+      </div>
+
+      <div class="booking-nav">
+        <button class="btn btn-ghost" id="bBack" type="button">Назад</button>
+        <button class="btn btn-primary magnetic" id="bNext" type="button">Далі <i class="ph ph-arrow-right"></i></button>
+        <p class="booking-err" id="bookingErr" role="alert"></p>
+      </div>
+    </div>
+  </div>
+
+  <!-- GSAP (ScrollTrigger) -->
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js"></script>
+  <script src="script.js"></script>
+  <script src="hero.js"></script>
+</body>
+</html>
