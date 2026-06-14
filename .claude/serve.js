@@ -52,7 +52,7 @@ http
           "Content-Range": `bytes ${start}-${end}/${stat.size}`,
           "Accept-Ranges": "bytes",
           "Content-Length": end - start + 1,
-          "Cache-Control": "no-cache",
+          "Cache-Control": "no-store, no-cache, must-revalidate",
         });
         fs.createReadStream(file, { start, end }).pipe(res);
       } else {
@@ -60,7 +60,7 @@ http
           "Content-Type": type,
           "Content-Length": stat.size,
           "Accept-Ranges": "bytes",
-          "Cache-Control": "no-cache",
+          "Cache-Control": "no-store, no-cache, must-revalidate",
         });
         fs.createReadStream(file).pipe(res);
       }

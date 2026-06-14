@@ -5,8 +5,9 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>BLISK. Преміум детейлінг-студія</title>
   <meta name="description" content="BLISK: корекція лаку, керамічне покриття та захисні плівки для авто преміумкласу в Києві. Дзеркальний блиск, що тримається роками." />
-  <meta name="theme-color" content="#0B1022" />
+  <meta name="theme-color" content="#0A0A0A" />
   <link rel="canonical" href="https://blisk.example/" />
+  <link rel="icon" type="image/svg+xml" href="assets/favicon.svg" />
 
   <!-- Open Graph (messenger / social cards) -->
   <meta property="og:type" content="website" />
@@ -61,6 +62,8 @@
   <link rel="stylesheet" href="styles.css" />
 </head>
 <body>
+  <a class="skip-link" href="#main">Перейти до вмісту</a>
+
   <!-- boot sequence: branded shimmer, then lights-on reveal -->
   <div class="boot" id="boot">
     <span class="boot-word">BLISK</span>
@@ -76,9 +79,9 @@
       <a href="#hero" class="brand" aria-label="BLISK, на головну">
         <span class="brand-mark" aria-hidden="true">
           <svg class="brand-svg" viewBox="0 0 24 28" fill="none">
-            <defs><linearGradient id="bkChrome" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#F7F2E6"/><stop offset=".46" stop-color="#CFC2A0"/><stop offset="1" stop-color="#7E6F4F"/></linearGradient></defs>
+            <defs><linearGradient id="bkChrome" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF2FF"/><stop offset=".46" stop-color="#B6CCEC"/><stop offset="1" stop-color="#5E7BA8"/></linearGradient></defs>
             <path d="M12 1.6C12 1.6 4.5 11 4.5 16.6a7.5 7.5 0 1 0 15 0C19.5 11 12 1.6 12 1.6Z" fill="url(#bkChrome)"/>
-            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#66E0D6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#2E90FF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
             <ellipse cx="15.4" cy="12" rx="1.7" ry="3.1" fill="#fff" opacity=".82" transform="rotate(24 15.4 12)"/>
           </svg>
         </span>
@@ -102,12 +105,12 @@
     </div>
   </header>
 
-  <main>
+  <main id="main">
     <!-- ============ HERO: auto-orbit video, native scroll ============ -->
     <section class="vhero" id="hero">
       <video class="vhero-bg" id="heroVideo" autoplay muted loop playsinline disablepictureinpicture
-             poster="assets/poster.jpg" aria-label="Авто обертається в детейлінг-боксі">
-        <source src="assets/car-orbit.mp4" type="video/mp4" />
+             poster="assets/porsche-poster.jpg" aria-label="Porsche у детейлінг-боксі">
+        <source src="assets/porsche.mp4" type="video/mp4" />
       </video>
       <div class="vhero-scrim" aria-hidden="true"></div>
       <div class="vhero-inner">
@@ -118,7 +121,9 @@
           <a href="#contact" class="btn btn-primary btn-lg magnetic" data-book>Записатися <i class="ph ph-arrow-right"></i></a>
           <a href="#calc" class="btn btn-ghost btn-lg">Розрахувати вартість</a>
         </div>
+        <p class="vhero-trust"><i class="ph-fill ph-star"></i> 4.9 · понад 200 відгуків · сертифіковані матеріали · гарантія в договорі</p>
       </div>
+      <a class="vhero-scroll" href="#services" aria-label="Гортати донизу"><span></span>Гортайте</a>
     </section>
 
     <!-- ============ SERVICES ============ -->
@@ -127,48 +132,52 @@
         <p class="eyebrow">Послуги</p>
         <h2 class="section-title">Повний догляд за авто <span class="chrome">під ключ</span></h2>
       </header>
-      <div class="svc-grid">
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-ceramic.jpg" alt="Керамічне покриття, краплі води на лаку" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Керамічне покриття</h3>
-            <p>Рідке скло 9H. Гідрофобний шар, захист від ультрафіолету та реагентів, дзеркальна глибина кольору.</p>
-            <span class="svc-tag">Гарантія до 5 років</span>
+      <div class="svc-bento">
+        <article class="sbento-tile s-xl" data-c="blue">
+          <img class="sbento-img" src="assets/svc-ceramic.jpg" alt="Керамічне покриття, краплі води на лаку" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Захист</span>
+            <h3 class="sbento-title">Керамічне покриття</h3>
+            <p class="sbento-desc">Рідке скло 9H. Гідрофобний шар, захист від ультрафіолету та реагентів, дзеркальна глибина кольору.</p>
+            <span class="sbento-tag"><i class="ph-fill ph-shield-check"></i> Гарантія до 5 років</span>
           </div>
         </article>
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-correction.jpg" alt="Корекція лаку, полірування кузова" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Корекція лаку</h3>
-            <p>Багатоетапне полірування. Прибираємо риски, голограми та затертості, повертаємо рівне дзеркало.</p>
+        <article class="sbento-tile s-wide" data-c="green">
+          <img class="sbento-img" src="assets/svc-correction.jpg" alt="Корекція лаку, полірування кузова" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Відновлення</span>
+            <h3 class="sbento-title">Корекція лаку</h3>
+            <p class="sbento-desc">Багатоетапне полірування. Прибираємо риски, голограми та затертості, повертаємо рівне дзеркало.</p>
           </div>
         </article>
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-ppf.jpg" alt="Захисна плівка PPF на кузові" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Захисна плівка PPF</h3>
-            <p>Антигравійна поліуретанова плівка з ефектом самовідновлення мікроподряпин на кузові.</p>
+        <article class="sbento-tile s-wide" data-c="blue">
+          <img class="sbento-img" src="assets/svc-ppf.jpg" alt="Захисна плівка PPF на кузові" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Захист</span>
+            <h3 class="sbento-title">Захисна плівка PPF</h3>
+            <p class="sbento-desc">Антигравійна поліуретанова плівка з ефектом самовідновлення мікроподряпин.</p>
           </div>
         </article>
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-interior.jpg" alt="Хімчистка салону, шкіряний інтерʼєр" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Хімчистка салону</h3>
-            <p>Глибоке очищення шкіри, тканини й пластику. Озонування проти запахів.</p>
+        <article class="sbento-tile" data-c="red">
+          <img class="sbento-img" src="assets/svc-interior.jpg" alt="Хімчистка салону, шкіряний інтерʼєр" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Чистота</span>
+            <h3 class="sbento-title">Хімчистка салону</h3>
           </div>
         </article>
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-wash.jpg" alt="Безконтактна мийка авто" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Безконтактна мийка</h3>
-            <p>Двофазна мийка та деконтамінація як основа будь-якої якісної роботи.</p>
+        <article class="sbento-tile" data-c="red">
+          <img class="sbento-img" src="assets/svc-wash.jpg" alt="Безконтактна мийка авто" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Чистота</span>
+            <h3 class="sbento-title">Безконтактна мийка</h3>
           </div>
         </article>
-        <article class="svc reveal">
-          <div class="svc-img"><img src="assets/svc-headlight.jpg" alt="Полірування фар авто" loading="lazy" /></div>
-          <div class="svc-body">
-            <h3>Полірування фар</h3>
-            <p>Повертаємо прозорість і чисте світло замість каламутного пластику.</p>
+        <article class="sbento-tile s-wide" data-c="green">
+          <img class="sbento-img" src="assets/svc-headlight.jpg" alt="Полірування фар авто" loading="lazy" />
+          <div class="sbento-body">
+            <span class="sbento-cat">Відновлення</span>
+            <h3 class="sbento-title">Полірування фар</h3>
+            <p class="sbento-desc">Повертаємо прозорість і чисте світло замість каламутного пластику.</p>
           </div>
         </article>
       </div>
@@ -230,31 +239,66 @@
         </div>
       </header>
       <div class="why-grid">
-        <article class="why-card reveal">
+        <article class="why-card reveal" data-c="blue">
           <span class="why-ic"><i class="ph ph-hand-fist"></i></span>
           <span class="why-line" aria-hidden="true"></span>
           <h3>Ручна робота</h3>
           <p>Без конвеєра. Майстер веде ваше авто від прийому до видачі особисто.</p>
         </article>
-        <article class="why-card reveal">
+        <article class="why-card reveal" data-c="green">
           <span class="why-ic"><i class="ph ph-garage"></i></span>
           <span class="why-line" aria-hidden="true"></span>
           <h3>Все у своєму боксі</h3>
           <p>Нічого не передаємо підрядникам. Повний контроль якості на кожному етапі.</p>
         </article>
-        <article class="why-card reveal">
+        <article class="why-card reveal" data-c="red">
           <span class="why-ic"><i class="ph ph-flask"></i></span>
           <span class="why-line" aria-hidden="true"></span>
           <h3>Преміум-хімія</h3>
           <p>Сертифіковані матеріали та обладнання, з якими покриття служить роками.</p>
         </article>
-        <article class="why-card reveal">
+        <article class="why-card reveal" data-c="violet">
           <span class="why-ic"><i class="ph ph-seal-check"></i></span>
           <span class="why-line" aria-hidden="true"></span>
           <h3>Гарантійний талон</h3>
           <p>Офіційна гарантія на покриття і чіткі рекомендації з догляду.</p>
         </article>
       </div>
+    </section>
+
+    <!-- ============ PROCESS: how we work ============ -->
+    <section class="process" id="process" aria-label="Як ми працюємо">
+      <header class="section-head section-head--center">
+        <p class="eyebrow">Як ми працюємо</p>
+        <h2 class="section-title">Чотири кроки до <span class="chrome" data-chrome>дзеркала</span></h2>
+        <p class="section-sub">Прозорий процес без сюрпризів: ви завжди знаєте, що відбувається з вашим авто.</p>
+      </header>
+      <ol class="proc-grid">
+        <li class="proc-step reveal" data-c="blue" style="--rd:0">
+          <span class="proc-num">01</span>
+          <i class="ph ph-chats-circle proc-ic"></i>
+          <h3>Консультація</h3>
+          <p>Обговорюємо ціль, оглядаємо авто, підбираємо пакет і фіксуємо ціну.</p>
+        </li>
+        <li class="proc-step reveal" data-c="green" style="--rd:1">
+          <span class="proc-num">02</span>
+          <i class="ph ph-magnifying-glass proc-ic"></i>
+          <h3>Діагностика</h3>
+          <p>Заміри товщини лаку, інспекційне світло, фотофіксація стану до робіт.</p>
+        </li>
+        <li class="proc-step reveal" data-c="red" style="--rd:2">
+          <span class="proc-num">03</span>
+          <i class="ph ph-wrench proc-ic"></i>
+          <h3>Робота</h3>
+          <p>Ручна корекція, кераміка чи плівка в боксі зі студійним світлом. Контроль на кожному етапі.</p>
+        </li>
+        <li class="proc-step reveal" data-c="violet" style="--rd:3">
+          <span class="proc-num">04</span>
+          <i class="ph ph-key proc-ic"></i>
+          <h3>Видача</h3>
+          <p>Показуємо результат під світлом, даємо гарантійний талон і поради з догляду.</p>
+        </li>
+      </ol>
     </section>
 
     <!-- ============ BEFORE / AFTER (inspection lamp) ============ -->
@@ -293,7 +337,7 @@
         </header>
 
         <div class="tiers">
-          <article class="tier" data-pack="Express блиск" role="button" tabindex="0">
+          <article class="tier" data-c="red" data-pack="Express блиск" role="button" tabindex="0">
             <div class="tier-top">
               <h3 class="tier-name">Express блиск</h3>
               <p class="tier-desc">Швидке відновлення між сезонами</p>
@@ -308,7 +352,7 @@
             <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
           </article>
 
-          <article class="tier" data-pack="Глибока корекція" role="button" tabindex="0">
+          <article class="tier" data-c="green" data-pack="Глибока корекція" role="button" tabindex="0">
             <div class="tier-top">
               <h3 class="tier-name">Глибока корекція</h3>
               <p class="tier-desc">Прибрати риски та повернути глибину</p>
@@ -323,7 +367,7 @@
             <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
           </article>
 
-          <article class="tier is-popular" data-pack="Кераміка PRO" role="button" tabindex="0">
+          <article class="tier is-popular" data-c="blue" data-pack="Кераміка PRO" role="button" tabindex="0">
             <span class="tier-badge">Популярний</span>
             <div class="tier-top">
               <h3 class="tier-name">Кераміка PRO</h3>
@@ -339,7 +383,7 @@
             <span class="tier-cta">Обрати <i class="ph ph-arrow-right"></i></span>
           </article>
 
-          <article class="tier" data-pack="PPF Бронепакет" role="button" tabindex="0">
+          <article class="tier" data-c="blue" data-pack="PPF Бронепакет" role="button" tabindex="0">
             <div class="tier-top">
               <h3 class="tier-name">PPF Бронепакет</h3>
               <p class="tier-desc">Максимальний захист кузова від сколів</p>
@@ -435,27 +479,27 @@
         <div class="gallery-track" id="galleryTrack">
           <figure class="work">
             <div class="work-img"><img src="assets/work-1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-black-suv/700/520?grayscale'" alt="Range Rover, кераміка" loading="lazy" /></div>
-            <figcaption><strong>Range Rover Sport</strong><span>Кераміка 9H плюс корекція</span></figcaption>
+            <figcaption><strong>Range Rover Sport</strong><span data-c="blue">Кераміка 9H плюс корекція</span></figcaption>
           </figure>
           <figure class="work">
             <div class="work-img"><img src="assets/work-2.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-sportcar/700/520?grayscale'" alt="Porsche, PPF" loading="lazy" /></div>
-            <figcaption><strong>Porsche 911</strong><span>PPF на весь кузов</span></figcaption>
+            <figcaption><strong>Porsche 911</strong><span data-c="blue">PPF на весь кузов</span></figcaption>
           </figure>
           <figure class="work">
             <div class="work-img"><img src="assets/work-3.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-sedan-blue/700/520?grayscale'" alt="BMW, корекція" loading="lazy" /></div>
-            <figcaption><strong>BMW M5</strong><span>Глибока корекція лаку</span></figcaption>
+            <figcaption><strong>BMW M5</strong><span data-c="green">Глибока корекція лаку</span></figcaption>
           </figure>
           <figure class="work">
             <div class="work-img"><img src="assets/work-4.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-interior-lux/700/520?grayscale'" alt="Салон, хімчистка" loading="lazy" /></div>
-            <figcaption><strong>Mercedes S-class</strong><span>Хімчистка та захист шкіри</span></figcaption>
+            <figcaption><strong>Mercedes S-class</strong><span data-c="red">Хімчистка та захист шкіри</span></figcaption>
           </figure>
           <figure class="work">
             <div class="work-img"><img src="assets/work-5.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-white-coupe/700/520?grayscale'" alt="Audi, кераміка" loading="lazy" /></div>
-            <figcaption><strong>Audi RS7</strong><span>Кераміка плюс полірування фар</span></figcaption>
+            <figcaption><strong>Audi RS7</strong><span data-c="blue">Кераміка плюс полірування фар</span></figcaption>
           </figure>
           <figure class="work">
             <div class="work-img"><img src="assets/work-6.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-tesla-dark/700/520?grayscale'" alt="Tesla, захист" loading="lazy" /></div>
-            <figcaption><strong>Tesla Model S</strong><span>PPF на фронтальну зону</span></figcaption>
+            <figcaption><strong>Tesla Model S</strong><span data-c="blue">PPF на фронтальну зону</span></figcaption>
           </figure>
         </div>
       </div>
@@ -470,7 +514,7 @@
       </header>
 
       <div class="masters-grid">
-        <article class="master reveal" style="--rd:0">
+        <article class="master reveal" data-c="blue" style="--rd:0">
           <img class="master-img" src="assets/team-1.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master1/640/800?grayscale'" alt="Олег, майстер керамічних покриттів за роботою" loading="lazy" />
           <span class="master-tag"><i class="ph ph-shield-check"></i> Кераміка та захист</span>
           <div class="master-cap">
@@ -480,7 +524,7 @@
           </div>
         </article>
 
-        <article class="master reveal" style="--rd:1">
+        <article class="master reveal" data-c="green" style="--rd:1">
           <img class="master-img" src="assets/team-2.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master2/640/800?grayscale'" alt="Андрій, спеціаліст з корекції лаку за роботою" loading="lazy" />
           <span class="master-tag"><i class="ph ph-sparkle"></i> Полірування ЛФП</span>
           <div class="master-cap">
@@ -490,7 +534,7 @@
           </div>
         </article>
 
-        <article class="master reveal" style="--rd:2">
+        <article class="master reveal" data-c="blue" style="--rd:2">
           <img class="master-img" src="assets/team-3.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master3/640/800?grayscale'" alt="Ігор, майстер оклейки плівкою за роботою" loading="lazy" />
           <span class="master-tag"><i class="ph ph-shield-star"></i> PPF броня</span>
           <div class="master-cap">
@@ -500,7 +544,7 @@
           </div>
         </article>
 
-        <article class="master reveal" style="--rd:3">
+        <article class="master reveal" data-c="red" style="--rd:3">
           <img class="master-img" src="assets/team-4.jpg" onerror="this.onerror=null;this.src='https://picsum.photos/seed/blisk-master4/640/800?grayscale'" alt="Марина, майстер детейлінгу салону за роботою" loading="lazy" />
           <span class="master-tag"><i class="ph ph-armchair"></i> Хімчистка та шкіра</span>
           <div class="master-cap">
@@ -528,17 +572,17 @@
         <figure class="review reveal">
           <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
           <blockquote>Забирав авто і не впізнав колір. Глибина лаку як у салоні, вода скочується сама. Сервіс на рівні.</blockquote>
-          <figcaption><span class="review-name">Андрій Коваль</span><span class="review-car">BMW M4 Competition</span><span class="review-svc">Кераміка 9H плюс корекція лаку</span></figcaption>
+          <figcaption><span class="review-name">Андрій Коваль</span><span class="review-car">BMW M4 Competition</span><span class="review-svc" data-c="blue">Кераміка 9H плюс корекція лаку</span></figcaption>
         </figure>
         <figure class="review reveal">
           <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
           <blockquote>Зробили PPF на новий Porsche. Плівки не видно взагалі, а дрібні подряпини зникають самі. Рекомендую.</blockquote>
-          <figcaption><span class="review-name">Дмитро Левченко</span><span class="review-car">Porsche Cayenne</span><span class="review-svc">PPF на весь кузов</span></figcaption>
+          <figcaption><span class="review-name">Дмитро Левченко</span><span class="review-car">Porsche Cayenne</span><span class="review-svc" data-c="blue">PPF на весь кузов</span></figcaption>
         </figure>
         <figure class="review reveal">
           <div class="review-stars"><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i><i class="ph-fill ph-star"></i></div>
           <blockquote>Хлопці врятували салон після собаки і моря. Шкіра як новенька, запаху немає. Дуже акуратна робота.</blockquote>
-          <figcaption><span class="review-name">Ірина Бондар</span><span class="review-car">Audi Q7</span><span class="review-svc">Хімчистка та захист шкіри</span></figcaption>
+          <figcaption><span class="review-name">Ірина Бондар</span><span class="review-car">Audi Q7</span><span class="review-svc" data-c="red">Хімчистка та захист шкіри</span></figcaption>
         </figure>
       </div>
     </section>
@@ -594,9 +638,9 @@
           </ul>
 
           <div class="socials">
-            <a href="#" aria-label="Instagram" class="social"><i class="ph ph-instagram-logo"></i></a>
-            <a href="#" aria-label="Telegram" class="social"><i class="ph ph-telegram-logo"></i></a>
-            <a href="#" aria-label="Viber" class="social"><i class="ph ph-chat-circle"></i></a>
+            <a href="https://instagram.com/" target="_blank" rel="noopener" aria-label="Instagram" class="social"><i class="ph ph-instagram-logo"></i></a>
+            <a href="https://t.me/" target="_blank" rel="noopener" aria-label="Telegram" class="social"><i class="ph ph-telegram-logo"></i></a>
+            <a href="viber://chat?number=%2B380000000000" aria-label="Viber" class="social"><i class="ph ph-chat-circle"></i></a>
           </div>
         </div>
 
@@ -641,9 +685,9 @@
       <a href="#hero" class="brand brand--footer">
         <span class="brand-mark" aria-hidden="true">
           <svg class="brand-svg" viewBox="0 0 24 28" fill="none">
-            <defs><linearGradient id="bkChromeF" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#F7F2E6"/><stop offset=".46" stop-color="#CFC2A0"/><stop offset="1" stop-color="#7E6F4F"/></linearGradient></defs>
+            <defs><linearGradient id="bkChromeF" x1="6" y1="2" x2="18" y2="26" gradientUnits="userSpaceOnUse"><stop stop-color="#EAF2FF"/><stop offset=".46" stop-color="#B6CCEC"/><stop offset="1" stop-color="#5E7BA8"/></linearGradient></defs>
             <path d="M12 1.6C12 1.6 4.5 11 4.5 16.6a7.5 7.5 0 1 0 15 0C19.5 11 12 1.6 12 1.6Z" fill="url(#bkChromeF)"/>
-            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#66E0D6" stroke-width="1.5" stroke-linecap="round" fill="none"/>
+            <path d="M5.4 18.4a7.5 7.5 0 0 0 5.2 5.1" stroke="#2E90FF" stroke-width="1.5" stroke-linecap="round" fill="none"/>
             <ellipse cx="15.4" cy="12" rx="1.7" ry="3.1" fill="#fff" opacity=".82" transform="rotate(24 15.4 12)"/>
           </svg>
         </span>
@@ -659,11 +703,18 @@
     </div>
   </footer>
 
+  <!-- ============ STICKY MOBILE CTA BAR ============ -->
+  <div class="m-bar" aria-label="Швидкі дії">
+    <a class="m-bar-call" href="tel:+380000000000"><i class="ph ph-phone-call"></i><span>Подзвонити</span></a>
+    <a class="m-bar-book btn btn-primary" href="#contact" data-book><i class="ph ph-calendar-check"></i> Записатися</a>
+  </div>
+
   <!-- ============ CONCIERGE CHAT (frontend) ============ -->
   <div class="cbot" id="cbot">
     <button class="cbot-launch" id="cbotLaunch" aria-label="Чат з консьєржем" aria-expanded="false">
       <i class="ph-fill ph-chat-teardrop-dots cbot-ic-open"></i>
       <i class="ph ph-x cbot-ic-close"></i>
+      <span class="cbot-launch-label">Майстер онлайн</span>
       <span class="cbot-badge" aria-hidden="true"></span>
     </button>
     <div class="cbot-panel" id="cbotPanel" role="dialog" aria-label="Чат з консьєржем BLISK" hidden>
