@@ -3,3 +3,6 @@ prototype-autodeteiling/
 
 # large unused source videos (the site uses car-orbit.mp4)
 *.src.mp4
+
+# stray nested clone GitHub Desktop created (the real repo IS this folder)
+blisk-prototype/

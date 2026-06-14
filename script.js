@@ -314,6 +314,19 @@
     g.addEventListener("pointerdown", onDown);
     g.addEventListener("pointermove", onMove);
     window.addEventListener("pointerup", onUp);
+
+    // arrow navigation + edge disable
+    const prev = $("#galPrev"), next = $("#galNext");
+    const step = () => { const c = g.querySelector(".work"); return c ? c.getBoundingClientRect().width + 22 : g.clientWidth * 0.8; };
+    const updateArrows = () => {
+      const max = g.scrollWidth - g.clientWidth - 2;
+      if (prev) prev.disabled = g.scrollLeft <= 2;
+      if (next) next.disabled = g.scrollLeft >= max;
+    };
+    if (prev) prev.addEventListener("click", () => g.scrollBy({ left: -step(), behavior: reduce ? "auto" : "smooth" }));
+    if (next) next.addEventListener("click", () => g.scrollBy({ left: step(), behavior: reduce ? "auto" : "smooth" }));
+    g.addEventListener("scroll", updateArrows, { passive: true });
+    updateArrows();
   })();
 
   /* ----------------------------------------------------------
